@@ -8,7 +8,7 @@ num2 =int( input("intrude 2 numero"))
 num3 =int( input("intrude 3 numero"))
 
 
-if num1 > num2 > num3:
+if num1 > num2 > num3:  
 
     print(f"maior: {num1} \nmenor: {num3}")
 

@@ -16,12 +16,14 @@ while var2:
     match j1:
         case 1:
             match j2:
-             case 1:
+                case 1:
                     print("empate, os dois escolheram pedra")
-             case 2:
+                case 2:
                     print("o jogador 2 ganhou")
-             case 3:
+                case 3:
                   print("o jogador 1 ganhou")
+                case _:
+                  print("Escolha errada")
         case 2:
             match j2:
                 case 1:
@@ -30,6 +32,8 @@ while var2:
                     print("empate, os dois escolheram papel")
                 case 3:
                     print("o jogador 2 ganhou")
+                case _:
+                    print("Escolha errada")
         case 3:
             match j2:
                 case 1:
@@ -38,8 +42,16 @@ while var2:
                     print("o jogador 1 ganhou")
                 case 3:
                     print("empate, os dois escolheram tesoura")
+                case _:
+                    print("Escolha errada")
+        case _:
+            print("Escolha errada")
     var1 = int(input("deseja voltar a jogar ? 1- sim 2- nao "))
-    if var1 == 2:
-        var2 = False
-    else:
-        print("erro a recomeçar!!!")
+    match var1:
+        case 2:
+            print("adeus")
+            var2 = False
+        case 1:
+            print("a recomeçar")    
+        case _:
+            print("resposta errada")
